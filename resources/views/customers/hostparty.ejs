@@ -1,0 +1,43 @@
+
+<!DOCTYPE HTML> 
+<html> 
+  
+<head> 
+
+</head> 
+  
+<body style="text-align:center;"
+      id="body"> 
+      <h1 class="text-3xl font-bold mb-2">Welcome Host</h1>
+
+    <p id="UP" class="text-gray-500 text-lg my-12"> 
+    </p> 
+    <button onClick="GFG_Fun()"  class="inline-block px-6 py-2 rounded-full btn-primary text-white font-bold my-5"> 
+        Generate Coupons
+    </button> 
+    <p id="DOWN"  class="text-grey-1000 text-lg mt-4 mb-8"> 
+    </p> 
+    <img class="w-1/5 mx-auto" src="/img/host.svg" alt="empty-cart">
+
+    <script> 
+        var up = document.getElementById('UP'); 
+        var down = document.getElementById('DOWN'); 
+        up.innerHTML =  
+          'Click Here To Generate Coupons'; 
+  
+        function randomStr(len, arr) { 
+            var ans = ''; 
+            for (var i = len; i > 0; i--) { 
+                ans +=  
+                  arr[Math.floor(Math.random() * arr.length)]; 
+            } 
+            return ans; 
+        } 
+  
+        function GFG_Fun() { 
+            down.innerHTML = randomStr(8, '123456789qwertyuioplkhgfdsazxcvbnm'); 
+        } 
+    </script> 
+</body> 
+  
+</html> 
